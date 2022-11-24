@@ -1,0 +1,41 @@
+<app-player-navbar></app-player-navbar>
+<form [formGroup]="playerRegistrationForm">
+    <div class="imgcontainer">
+        <div class="container">
+            <label for="playerName">
+                <b>Name </b>
+            </label><br>
+            <input  formControlName="playerName" type="text"  placeholder="Enter Player Name" name="playerName" required><br>
+
+            <label for="playerdob"> 
+                <b>DOB</b>
+            </label><br>
+            <input formControlName="playerdob" type="date" placeholder="Enter Age" name="playerdob" required><br>
+            <label for="pan">
+                <b>PAN No</b>
+            </label><br>
+            <input formControlName="pan" type="text" placeholder="Enter PAN No" name="pan" required><br>
+
+            <label for="playerEmail">
+                <b>Email</b>
+            </label><br>
+            <input formControlName="playerEmail" type="text" placeholder="Enter Email" name="playerEmail" required><br>
+
+            <label for="playerPhone">
+                <b>Phone Number</b>
+            </label><br>
+            <input formControlName="playerPhone" type="text" placeholder="Enter Phone Number" name="playerPhone" required><br>
+            <label for="playerPwd">
+                <b>Password</b>
+            </label><br>
+            <input formControlName="playerPwd" type="password" placeholder="Enter Password" name="playerPwd" required><br>
+            
+            <input class="btn btn-success" type="button" value="SignUp" (click)="signup()" />
+            <input class="btn btn-info" type="button" value="Login" routerLink="/" />
+            <div *ngIf="flag">
+              <div class="msg">{{message}}</div>
+            </div>
+
+        </div>
+    </div>
+</form>

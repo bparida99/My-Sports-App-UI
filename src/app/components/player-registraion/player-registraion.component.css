@@ -1,0 +1,38 @@
+input[type=text], input[type=password], input[type=date]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .imgcontainer {
+    text-align: left;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  .container {
+    padding: 16px;
+    margin-left: 400px;
+    margin-right: 200px;
+  }
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  .buttonsignup{
+    background-color: green;
+    color: #ccc;
+    width: 105px;
+    height:25px
+  }
+  .buttonlogin{
+    background-color: rgb(0, 212, 250);
+    color: rgb(14, 13, 13);
+    width: 105px;
+    height:25px
+  }
+  .msg{
+    color: red;
+  }

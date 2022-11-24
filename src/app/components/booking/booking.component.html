@@ -1,0 +1,32 @@
+<app-logedin-player-navbar></app-logedin-player-navbar>
+<div class="container">
+<div class="sports">
+    <label for="sports">
+        <b>Choose Sports </b>
+    </label><br>
+    <select name="selectsports" id="selectsports" [(ngModel)]="selectsports" (ngModelChange)="setFlag()">
+        <option *ngFor="let sports of allSports" [value]="sports.sportsName">
+            {{sports.sportsName}}
+        </option>
+    </select>
+    
+</div>
+<div class="timming" *ngIf="flag">
+    <!--added-->
+    <label for="bookingdate">
+        <b>Choose Date </b>
+    </label><br>
+    <input type="date" placeholder="Enter Date" name="bookingdate" [(ngModel)]="bookingdate" required><br>
+    <!--end-->
+    <label for="timming">
+        <b>Choose Timming </b>
+    </label><br>
+    <select name="selectedTimmings" id="selectedTimmings" [(ngModel)]="selectedTimmings">
+        <option *ngFor="let sports of allTimmings" [value]="sports.id">
+            {{sports.time}}
+        </option>
+    </select> <br>
+    <br>
+    <input class="btn btn-success" type="button" value="Book" (click)="booking()"  />
+</div>
+</div>

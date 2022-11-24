@@ -1,0 +1,29 @@
+<app-logedin-player-navbar></app-logedin-player-navbar>
+<div>
+    <div class="header">My Bookings</div>
+    <table class="table  table-bordered">
+
+        <thead>
+            <tr>
+                <th>
+                    Sports Name
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Time
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor= "let booking of bookings"> 
+                <td>{{booking.sportsName}}</td>
+                <td>{{booking.bookingDate}}</td>
+                <td>{{booking.time}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

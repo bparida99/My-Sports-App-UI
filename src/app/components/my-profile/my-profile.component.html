@@ -1,0 +1,52 @@
+<app-logedin-player-navbar></app-logedin-player-navbar>
+
+    <div class="imgcontainer">
+        <div class="container" *ngIf="flag2">
+            <label for="userName">
+                <b>UserId :</b>
+            </label>
+            {{playerDetails.playerId}}<br>     
+        
+        
+            <label for="name">
+                <b>Name :</b>
+            </label>
+            {{playerDetails.playerName}}<br>  
+            
+            <label for="phone">
+                <b>Phone Number :</b>
+            </label>
+            {{playerDetails.playerPhone}}<br> 
+            <label for="email">
+                <b>Email Id :</b>
+            </label>
+            {{playerDetails.playerEmail}}<br> 
+            <label for="pan">
+                <b>PAN :</b>
+            </label>
+            {{playerDetails.pan}}<br>
+            <label for="pwd">
+                <b>Password :</b>
+            </label>
+            {{playerDetails.playerPwd}}<br>  
+            <input class="btn btn-info" type="button" value="Edit" (click)="edit()" />
+        </div>
+       <div class="editcontainer" *ngIf="flag1">
+        <form [formGroup]="playereditForm">
+            <div class="imgcontainer">
+                <div class="container">
+                    <label for="email">
+                        <b>Email </b>
+                    </label><br>
+                    <input  formControlName="email" type="text"  placeholder="Enter Email" name="email" required><br>
+                    <label for="password">
+                        <b>Password</b>
+                    </label><br>
+                    <input formControlName="password" type="text" placeholder="Enter Password" name="password" required><br>
+                    <input class="btn btn-info" type="button" value="Update" (click)="update()" />
+                </div>
+            </div>
+        </form>
+       </div>
+    </div>
+

@@ -1,0 +1,21 @@
+<app-player-navbar></app-player-navbar>
+<form [formGroup]="playerLoginForm">
+    <div class="imgcontainer">
+        <div class="container">
+            <label for="userName">
+                <b>UserId </b>
+            </label><br>
+            <input  formControlName="userName" type="text"  placeholder="Enter User Id or Email" name="userName" required><br>
+            <label for="password">
+                <b>Password</b>
+            </label><br>
+            <input formControlName="password" type="password" placeholder="Enter Password" name="password" required><br>
+            
+            <input class="btn btn-success" type="button" value="SignUp" routerLink="/register" />
+            <input class="btn btn-info" type="button" value="Login" (click)="login()" />
+            <div *ngIf="flag">
+              <div class="msg">{{message}}</div>
+            </div>
+        </div>
+    </div>
+</form>
